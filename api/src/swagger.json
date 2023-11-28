@@ -1,0 +1,12 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Clinic documentation",
+    "description": "This is an API for a Psychological clinic",
+    "version": "1.0.0",
+    "contact": {
+      "email": "fernandootoni.dev@gmail.com",
+      "phone": "+55(11) 97442-8485"
+    }
+  }
+}

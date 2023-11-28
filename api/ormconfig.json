@@ -1,0 +1,13 @@
+{
+  "type": "postgres",
+  "port": 5432,
+  "host": "localhost",
+  "username": "docker",
+  "password": "postgres",
+  "database": "clinic",
+  "migrations": ["./src/config/database/migrations/*.ts"],
+  "entities": ["./src/library/entities/*.ts"],
+  "cli": {
+    "migrationsDir": "./src/config/database/migrations"
+  }
+}
