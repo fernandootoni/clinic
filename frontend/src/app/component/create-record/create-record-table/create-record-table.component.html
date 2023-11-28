@@ -1,0 +1,43 @@
+<section class="container">
+  <h3 class="title">
+    as {{tableName}}
+  </h3>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Day</th>
+        <th>Time</th>
+        <th>Patient</th>
+        <th>Duration</th>
+        <th>Psychologist</th>
+        <th>Supervisor</th>
+        <th>...</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let appointment of appointments">
+        <td>{{appointment.day}}</td>
+        <td>{{appointment.hour}}h{{appointment.minute.toString().padStart(2, '0')}}</td>
+        <td>
+          <a href="/patient/dashboard/{{appointment.patient_id}}">
+            {{appointment.patient_name}}
+          </a>
+        </td>
+        <td>{{appointment.duration}}min</td>
+        <td>
+          <a href="/user/{{appointment.psychologist_id}}">
+            {{appointment.psychologist_name}}
+          </a>
+        </td>
+        <td>
+          <a href="/user/{{appointment.supervisor_id}}">
+            {{appointment.supervisor_name}}
+          </a>
+        </td>
+        <td>
+          <i (click)="createRecord(appointment.id)" class="bi bi-check-square-fill"></i>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>

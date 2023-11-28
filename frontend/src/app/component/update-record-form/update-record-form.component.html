@@ -1,0 +1,141 @@
+<section>
+  <form
+  class="form"
+  (ngSubmit)="submit()" 
+  [formGroup]="updateForm" 
+  #formDir="ngForm" action=""
+>
+  <div class="select-container">
+    <div class="checkbox-container">
+      <div class="form-group">
+        <label for="psychologistDone">Psychologist:</label>
+        <select (change)="onPsySelected($event)" name="user" id="user" formControlName="psychologist_id">
+          <option value="" disabled selected hidden>Choose a Psychologist</option>
+          <option 
+            *ngFor="let user of userList"
+            [value]="user.id"
+          >
+            {{user.name}}
+          </option>
+        </select>
+      </div>
+      
+  
+      <div class="checkbox">
+        <input 
+          name="psychologistDone" 
+          type="checkbox" 
+          formControlName="psychologist_done"
+          required 
+        >
+      </div>
+    </div>
+
+    <div class="checkbox-container">
+      <div class="form-group">
+        <label for="psychologistDone">Supervisor:</label>
+        <select (change)="onSupSelected($event)" name="user" id="user" formControlName="supervisor_id">
+          <option value="" disabled selected hidden>Choose a Supervisor</option>
+          
+          <option 
+          *ngFor="let user of userList"
+          [value]="user.id"
+          >
+            {{user.name}}
+          </option>
+        </select>
+      </div>
+      <div class="checkbox">
+        <input 
+          name="supervisorDone" 
+          type="checkbox" 
+          formControlName="supervisor_done"
+          required 
+        >
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <label for="supervisorDone">Description:</label>
+      <select (change)="onDescriptionSelected($event)" name="description" id="description" formControlName="done_description">
+        <option value="" disabled selected hidden>Choose a Description</option>
+        
+        <option 
+        *ngFor="let description of descriptions"
+        [value]="description"
+        >
+          {{description}}
+        </option>
+      </select>
+    </div>
+  </div>
+  <div class="done-box">
+    <label for="done">Done:</label>
+    <input 
+      name="done" 
+      type="checkbox" 
+      formControlName="done"
+      required 
+    >
+  </div>
+  <div class="form-group">
+    <label for="appointmentDate">Appointment Date:</label>
+    <input 
+      name="appointmentDate" 
+      type="text" 
+      placeholder="Enter the Appointment Date" 
+      formControlName="appointment_date"
+      required
+    >
+  </div>
+  <div class="form-group">
+    <label for="duration">Duration:</label>
+    <input 
+      name="duration" 
+      type="email" 
+      placeholder="Enter the Duration" 
+      formControlName="duration"
+      required 
+    >
+  </div>
+  <div class="form-group">
+    <label for="doneDate">Done Date:</label>
+    <input 
+      name="doneDate" 
+      type="text" 
+      formControlName="done_date"
+      required
+    >
+  </div>
+  <div class="checkbox-container">
+    <div class="form-group">
+      <label for="verifiedBy">Verified by:</label>
+      <input 
+        name="verifiedBy" 
+        type="text"
+        formControlName="verified_by"
+        required
+      >
+    </div>
+    <div class="checkbox">
+      <input 
+        name="verified" 
+        type="checkbox" 
+        formControlName="verified"
+        required
+      >
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="verifiedDate">Verified Date:</label>
+    <input 
+      name="verifiedDate" 
+      type="text" 
+      formControlName="verified_date"
+      required
+    >
+  </div>
+  <input type="submit" value="Update">
+</form>
+</section>

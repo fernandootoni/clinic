@@ -1,0 +1,27 @@
+.sidebar { 
+  position: fixed;
+  top: 35px;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+  width: 45px;
+  min-height: calc(100vh - 35px);
+  background-color: rgb(56, 56, 56);
+}
+
+.item {
+  list-style: none;
+  margin: 1rem 0;
+}
+
+.icon {
+  font-size: 1.5rem;
+  color: rgb(231, 231, 231);
+}
+
+.selected {
+  color: rgb(0, 209, 0);
+}

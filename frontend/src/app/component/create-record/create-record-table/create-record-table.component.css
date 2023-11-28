@@ -1,0 +1,59 @@
+.container {
+  width: 750px;
+}
+
+.title {
+  margin: 0 0 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+
+  color: white;
+}
+
+.table {
+  width: 100%;
+  background-color: rgb(37, 37, 37);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 20px;
+}
+
+.table thead tr th {
+  padding: 0.4rem 0.4rem;
+
+  text-align: center;
+  font-weight: bold;
+
+  background-color: rgb(37, 37, 37);
+  color: #ffffff;
+}
+
+.table tbody tr td {
+  padding: 0.4rem .4rem;
+  
+  font-size: .85rem;
+  font-weight: bold;
+
+  color: white;
+  background-color: rgb(71, 71, 71);
+}
+
+.table tbody tr a {
+  text-decoration: none;
+  color: white;
+
+  transition: 0.3s;
+}
+
+.table tr td a i,
+.table tr td i {
+  padding: 0.4rem;
+  font-size: 1.2rem;
+  color: rgb(219, 219, 219);
+  transition: .3s;
+}
+
+.table tr td a i:hover,
+.table tr td i:hover,
+.table tbody tr a:hover {
+  color: rgb(40, 202, 0);
+}

@@ -1,0 +1,60 @@
+<form class="form" (ngSubmit)="submit()" [formGroup]="appointmentCreateForm" #formDir="ngForm" action="">
+  <div class="select-container">
+    <select (change)="onPsySelected($event)" name="user" id="user" formControlName="psychologist_id">
+      <option value="" disabled selected hidden>Choose a Psychologist</option>
+      <option 
+        *ngFor="let user of userList"
+        [value]="user.id"
+      >
+        {{user.name}}
+      </option>
+    </select>
+
+    <select (change)="onSupSelected($event)" name="user" id="user" formControlName="supervisor_id">
+      <option value="" disabled selected hidden>Choose a Supervisor</option>
+
+      <option 
+        *ngFor="let user of userList"
+        [value]="user.id"
+      >
+        {{user.name}}
+      </option>
+    </select>
+
+    <select (change)="onPatientSelected($event)" name="user" id="user" formControlName="patient_id" required>
+      <option value="" disabled selected hidden>Choose a Patient</option>
+
+      <option 
+        *ngFor="let patient of patientList"
+        [value]="patient.id"
+      >
+        {{patient.name}}
+      </option>
+    </select>
+
+    <select (change)="onDaySelected($event)" name="day" id="day" formControlName="day" required>
+      <option value="" disabled selected hidden>Choose a Day</option>
+
+      <option 
+        *ngFor="let day of days"
+        [value]="day.value"
+      >
+        {{day.name}}
+      </option>
+    </select>
+  </div>
+  
+  <div class="form-group">
+    <input name="hour" type="text" placeholder="Appointment Hour" formControlName="hour" required>
+  </div>
+
+  <div class="form-group">
+    <input name="minute" type="text" placeholder="Appointment Minute" formControlName="minute" required>
+  </div>
+
+  <div class="form-group">
+    <input name="duration" type="text" placeholder="Appointment Duration" formControlName="duration" required>
+  </div>
+  
+  <input type="submit" value="Create">
+</form>

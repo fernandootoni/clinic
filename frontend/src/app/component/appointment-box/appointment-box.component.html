@@ -1,0 +1,20 @@
+<section class="appointment">
+  <a href="/patient/dashboard/{{appointment.patient_id}}">
+    <h3><span>{{ appointment.patient_name[0] }}</span>{{appointment.patient_name.slice(1)}}</h3>
+  </a>
+  <div class="title">
+    <a href="/user/{{appointment.psychologist_id}}">
+      <h6><span>{{ appointment.psychologist_name.split(' ')[0]}}</span></h6>
+    </a>
+    <a href="/user/{{appointment.supervisor_id}}">
+      <h6><span>{{ appointment.supervisor_name.split(' ')[0]}}</span></h6>
+    </a>
+  </div>
+  <div class="info">
+    <p>
+      <i class="bi bi-clock"></i>
+      {{appointment.hour}}<span>h</span>{{appointment.minute.toString().padStart(2, '0')}}
+    </p>
+    <p><i class="bi bi-hourglass"></i> {{ appointment.duration }}min</p>
+  </div>
+</section>

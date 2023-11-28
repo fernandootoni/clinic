@@ -1,0 +1,42 @@
+<section class="sidebar">
+  <ul>
+    <li class="item">
+      <a href="">
+        <i 
+          [ngClass]="actualPage === 'home' ? 'icon bi bi-house selected' : 'icon bi bi-house'"
+        ></i>
+      </a>
+    </li>
+    <div *ngIf="authenticated">
+      <li *ngIf="accessLevel > 1" class="item">
+        <a href="/allusers">
+          <i 
+            [ngClass]="actualPage === 'allusers' ? 'icon bi-people selected' : 'icon  bi bi-people'"
+          ></i>
+        </a>
+      </li>
+      <li class="item">
+        <a href="dashboard/{{userID}}">
+          <i
+            [ngClass]="actualPage === 'dashboard' ? 'icon bi-book-half selected' : 'icon bi bi-book-half'"
+          ></i>
+        </a> 
+      </li>
+      <li class="item">
+        <a href="/report/{{userID}}">
+          <i 
+            [ngClass]="actualPage === 'report' ? 'icon bi bi-calendar2-check selected' : 'icon bi bi-calendar2-check'"
+          ></i>
+        </a>
+      </li>
+      <li *ngIf="accessLevel > 1" class="item">
+        <a href="/verify">
+          <i 
+            [ngClass]="actualPage === 'verify' ? 'icon bi bi-check-all selected' : 'icon bi bi-check-all'"
+            class="bi bi-book-half"
+          ></i>
+        </a>
+      </li>
+    </div>
+  </ul>
+</section>

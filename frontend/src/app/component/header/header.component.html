@@ -1,0 +1,12 @@
+<nav class="header">
+  <div>
+    <span>C</span>linic
+  </div>
+  <ul>
+    <li *ngIf="!authenticated"><a routerLink="/">Login</a></li>
+    <li *ngIf="authenticated">{{ username }}</li>
+    <li *ngIf="authenticated" (click)="logout()">
+      <i class="bi bi-person-x-fill">Logout</i>
+    </li>
+  </ul>
+</nav>

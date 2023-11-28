@@ -1,0 +1,42 @@
+.section-container {
+  margin-bottom: 0.5rem;
+}
+
+.table-name {
+  padding-top: 1rem;
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+}
+
+.table-container {
+  display: flex;
+  margin: auto;
+  width: 1400px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 20px;
+}
+
+.table-container main {
+  width: 200px;
+  
+  background-color: rgb(54, 54, 54);
+}
+
+.table header {
+  padding: 0.5rem 0;
+
+  text-align: center;
+  font-weight: bold;
+
+  background-color: rgb(37, 37, 37);
+  color: white;
+}
+
+
+.table-name {
+  padding: 2rem 0 1rem;
+  text-align: center;
+}
+
+.table-name span {
+  color: rgb(35, 177, 0);
+}

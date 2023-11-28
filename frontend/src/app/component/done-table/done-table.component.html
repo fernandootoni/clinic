@@ -1,0 +1,68 @@
+<section>
+  <h2 class="title">{{tableName}}</h2>
+
+  <main>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Duration</th>
+          <th>Verified by</th>
+          <th>Patient</th>
+          <th></th>
+          <th>Psychologist</th>
+          <th></th>
+          <th>Supervisor</th>
+          <th>Description</th>
+          <th>...</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let record of options">
+          <td>{{record.appointment_date}}</td>
+          <td>{{record.duration}}min</td>
+          <td>{{record.verified_by.split(" ")[0]}} {{record.verified_by.split(" ")[1]}}</td>
+          <td>
+            <a href="/patient/dashboard/{{record.patient_id}}">
+              {{record.patient_name.split(" ")[0]}} {{record.patient_name.split(" ")[1]}}
+            </a>
+          </td>
+          <td>
+            <i
+            [ngClass]="
+            record.psychologist_done
+            ? 'bi bi-check2 done'
+            : 'bi bi-x-lg not-done'
+            "
+            ></i>
+          </td>
+          <td>
+            <a href="user/{{record.psychologist_id}}">
+              {{record.psychologist_name.split(" ")[0]}} {{record.psychologist_name.split(" ")[1]}}
+            </a>
+          </td>
+          <td>
+            <i
+              [ngClass]="
+                record.supervisor_done
+                  ? 'bi bi-check2 done'
+                  : 'bi bi-x-lg not-done'
+              "
+            ></i>
+          </td>
+          <td>
+            <a href="user/{{record.supervisor_id}}">
+              {{record.supervisor_name.split(" ")[0]}} {{record.supervisor_name.split(" ")[1]}}
+            </a>
+          </td>
+          <td>{{record.done_description}}</td>
+          <td>
+            <a href="record/details/{{record.id}}">
+              <i class="bi bi-eye"></i>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+</section>

@@ -1,0 +1,15 @@
+<form class="form" (ngSubmit)="submit()" [formGroup]="registerForm" #formDir="ngForm" action="">
+  <div class="form-group">
+    <label for="name">Patient name:</label>
+    <input name="name" type="text" placeholder="Enter the Patient name" formControlName="name" required>
+  </div>
+  <div class="form-group">
+    <label for="responsible">Responsible:</label>
+    <input name="responsible" type="text" placeholder="Enter the Responsible name" required formControlName="responsible">
+  </div>
+  <div class="form-group">
+    <label for="phone">Phone:</label>
+    <input name="phone" type="text" placeholder="Enter the phone" required formControlName="phone">
+  </div>
+  <input type="submit" value="Create">
+</form>

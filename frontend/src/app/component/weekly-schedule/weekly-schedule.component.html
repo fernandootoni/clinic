@@ -1,0 +1,19 @@
+<section class="section-container">
+  <h2 class="table-name">
+    as <span>{{tableName[0]}}</span>{{tableName.slice(1)}}
+  </h2>
+  <ng-container *ngIf="appointments.length > 0">
+    <div  class="table-container">
+      <main class="table" *ngFor="let dayInfo of appointmentsByDay">
+        <header>
+          {{ dayInfo.name }}
+        </header>
+        <ng-container *ngFor="let appointment of dayInfo.data">
+          <app-appointment-box
+            [appointment]="appointment"
+          />
+        </ng-container>
+      </main>
+    </div>
+  </ng-container>
+</section>

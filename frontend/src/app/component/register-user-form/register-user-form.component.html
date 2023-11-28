@@ -1,0 +1,23 @@
+<form class="form" (ngSubmit)="submit()" [formGroup]="registerForm" #formDir="ngForm" action="">
+  <div class="form-group">
+    <label for="name">Username:</label>
+    <input name="name" type="text" placeholder="Enter the Username" formControlName="name" required>
+  </div>
+  <div class="form-group">
+    <label for="email">E-mail:</label>
+    <input name="email" type="email" placeholder="Enter the E-mail" required formControlName="email">
+  </div>
+  <div class="form-group">
+    <label for="password">Password:</label>
+    <input name="password" type="password" placeholder="Enter the password" required formControlName="password">
+  </div>
+  <div class="form-group">
+    <label for="hourlywage">Hourly wage:</label>
+    <input name="hourlywage" type="number" placeholder="Enter the Hourly wage" required formControlName="hourlywage">
+  </div>
+  <div class="form-group">
+    <label for="supervisorhourlywage">Supervisor hourly wage:</label>
+    <input name="supervisorhourlywage" type="number" placeholder="Enter the Hourly wage as Supervisor" required formControlName="supervisorhourlywage">
+  </div>
+  <input type="submit" value="Create">
+</form>

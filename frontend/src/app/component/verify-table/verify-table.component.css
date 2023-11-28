@@ -1,0 +1,69 @@
+.title {
+  padding: 1rem;
+  text-align: center;
+  color: white;
+}
+
+.title span {
+  color: rgb(35, 177, 0);
+}
+
+.table {
+  margin: auto;
+  border: 1px solid rgb(37, 37, 37);
+  background-color: rgb(37, 37, 37);
+  border-radius: 5px;
+}
+
+.table thead tr th {
+  padding: 0.25rem .5rem;
+  font-size: 0.85rem;
+
+  text-align: center;
+  font-weight: bold;
+
+  background-color: rgb(37, 37, 37);
+  color: #ffffff;
+}
+
+.table tbody tr td {
+  padding: 0.2rem 0.4rem 0.25rem 0.4rem;
+  text-align: center;
+  
+  font-size: 0.85rem;
+  font-weight: bold;
+
+  color: white;
+  background-color: rgb(71, 71, 71);
+  transition: .4s;
+}
+
+.table tbody tr a {
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.true {
+  font-size: 1.5em;
+  color: rgb(0, 255, 0);
+}
+
+.false {
+  font-size: 1.5em;
+  color: red;
+}
+  
+.icon {
+  text-align: center;
+}
+
+.table tbody tr td i {
+  transition: 0.3s;
+}
+
+.table tbody tr a:hover,
+.table tbody tr td i:hover
+ {
+  color: rgb(0, 255, 0);
+}

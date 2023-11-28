@@ -1,0 +1,86 @@
+main {
+  height: 500px;
+  overflow-y: auto;
+}
+
+.title {
+  text-align: center;
+
+  margin: 1rem 0 1rem;
+
+  color: white;
+}
+
+.table {
+  width: 100%;
+  border-radius: 3px;
+  background-color: rgb(37, 37, 37);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 20px;
+}
+
+.table thead tr th {
+  padding: 0.25rem .5rem;
+  font-size: 0.85rem;
+
+  text-align: center;
+  font-weight: bold;
+
+  background-color: rgb(37, 37, 37);
+  color: #ffffff;
+}
+
+.table tbody tr td {
+  padding: 0.2rem 0.4rem;
+  
+  font-size: 0.8rem;
+  font-weight: bold;
+
+  color: white;
+  background-color: rgb(71, 71, 71);
+}
+
+.table tbody tr a {
+  text-decoration: none;
+  color: white;
+  transition: 0.4s;
+}
+
+.table tr td a i,
+.table tr td i {
+  font-size: 1.2rem;
+  color: rgb(219, 219, 219);
+  transition: .3s;
+}
+
+.table tr td a i:hover,
+.table tr td i:hover,
+.table tbody tr a:hover {
+  color: rgb(40, 202, 0);
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  margin: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(0, 0, 0) ;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.done::before {
+  font-size: 0.9rem;
+  color: rgb(40, 202, 0);
+}
+
+.not-done::before {
+  font-size: 0.9rem;
+  color: red;
+}

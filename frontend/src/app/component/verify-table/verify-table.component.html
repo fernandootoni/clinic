@@ -1,0 +1,123 @@
+<section>
+  <h2 class="title">
+    <span>{{ tableName[0] }}</span>{{ tableName.slice(1) }}
+  </h2>
+
+  <main>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Role</th>
+          <th>Appointment Date</th>
+          <th>Day</th>
+          <th>Psychologist</th>
+          <th>Psy Done</th>
+          <th>Supervisor</th>
+          <th>Sup Done</th>
+          <th>Patient</th>
+          <th>Duration</th>
+          <th>Created at</th>
+          <th>...</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let appointment of recordsAsPsy">
+          <td>Psy</td>
+          <td>{{ appointment.appointment_date }}</td>
+          <td>{{ appointment.dayName }}</td>
+          <td>
+            <a href="user/{{appointment.psychologist_id}}">
+              {{ appointment.psychologist_name }}
+            </a>
+          </td>
+          <ng-container>
+            <td class="icon" *ngIf="appointment.psychologist_done == true">
+              <i class="bi bi-check2 true"></i>
+            </td>
+            <td class="icon" *ngIf="appointment.psychologist_done == false">
+              <i class="bi bi-x-lg false"></i>
+            </td>
+          </ng-container>
+          <td>
+            <a href="user/{{appointment.supervisor_id}}">
+              {{ appointment.supervisor_name }}
+            </a>
+          </td>
+          <ng-container>
+            <td class="icon" *ngIf="appointment.supervisor_done == true">
+              <i class="bi bi-check2 true"></i>
+            </td>
+            <td class="icon" *ngIf="appointment.supervisor_done == false">
+              <i class="bi bi-x-lg false"></i>
+            </td>
+          </ng-container>
+          <td>
+            <a href="patient/dashboard/{{appointment.patient_id}}">
+              {{ appointment.patient_name }}
+            </a>
+          </td>
+          <td>{{ appointment.duration }}min</td>
+          <td>{{ appointment.formatted_created_at }}</td>
+          <td>
+            <i
+              (click)="verifyRecord(appointment.id)"
+              [ngClass]="
+                appointment.verified === true
+                  ? 'bi bi-check2-all true'
+                  : 'bi bi-check2-all'
+              "
+            ></i>
+          </td>
+        </tr>
+        <tr *ngFor="let appointment of recordsAsSup">
+          <td>Sup</td>
+          <td>{{ appointment.appointment_date }}</td>
+          <td>{{ appointment.dayName }}</td>
+          <td>
+            <a href="user/{{appointment.psychologist_id}}">
+              {{ appointment.psychologist_name }}
+            </a>
+          </td>
+          <ng-container>
+            <td class="icon" *ngIf="appointment.psychologist_done == true">
+              <i class="bi bi-check2 true"></i>
+            </td>
+            <td class="icon" *ngIf="appointment.psychologist_done == false">
+              <i class="bi bi-x-lg false"></i>
+            </td>
+          </ng-container>
+          <td>
+            <a href="user/{{appointment.supervisor_id}}">
+              {{ appointment.supervisor_name }}
+            </a>
+          </td>
+          <ng-container>
+            <td class="icon" *ngIf="appointment.supervisor_done == true">
+              <i class="bi bi-check2 true"></i>
+            </td>
+            <td class="icon" *ngIf="appointment.supervisor_done == false">
+              <i class="bi bi-x-lg false"></i>
+            </td>
+          </ng-container>
+          <td>
+            <a href="patient/dashboard/{{appointment.patient_id}}">
+              {{ appointment.patient_name }}
+            </a>
+          </td>
+          <td>{{ appointment.duration }}min</td>
+          <td>{{ appointment.formatted_created_at }}</td>
+          <td>
+            <i
+              (click)="verifyRecord(appointment.id)"
+              [ngClass]="
+                appointment.verified === true
+                  ? 'bi bi-check2-all true'
+                  : 'bi bi-check2-all'
+              "
+            ></i>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+</section>

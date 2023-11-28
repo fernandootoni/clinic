@@ -1,0 +1,78 @@
+.form-group {
+  margin: 0.5rem 0;
+}
+.form-group input {
+  border: none;
+  padding: 0.9rem;
+  width: 100%;
+
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-radius: 7px;
+
+  color: rgb(255, 255, 255);
+  background-color: rgb(48, 48, 48);
+}
+
+.form-group input:focus {
+  background-color: rgb(39, 39, 39);
+  outline: none;
+}
+
+.form input[type="submit"] {
+  width: 100%;
+
+  margin-top: 1rem;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 15px;
+
+  font-size: 1rem;
+  font-weight: bold;
+
+  color: rgb(255, 255, 255);
+  background-color: rgb(31, 31, 31);
+
+  transition: .5s;
+}
+
+
+.form input[type="submit"]:hover {
+  cursor: pointer;
+  
+  color: rgb(59, 248, 59);
+  background-color: rgb(24, 24, 24);
+}
+
+.form-group label{
+  display: block;
+
+  font-weight: bold;
+  font-size: 0.7rem;
+
+  margin-bottom: 0.2rem;
+
+  color: rgb(241, 241, 241);
+}
+
+.message-container {
+  margin-top: 0.5rem;
+}
+
+.message-container div {
+  font-weight: bold;
+  text-align: center;
+
+  padding: 0.7rem;
+  border-radius: 5px;
+
+  color: white;
+}
+
+.success {
+  background-color: green;
+}
+
+.error {
+  background-color: rgb(128, 0, 0);
+}
