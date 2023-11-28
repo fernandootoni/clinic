@@ -1,0 +1,10 @@
+<section class="container">
+  <div>
+    <h2 class="title">Create <span>A</span>ppointment</h2>
+    <app-register-appointment-form
+      *ngIf="pageLoaded === true"
+      [userList]="userList"
+      [patientList]="patientList"
+    />
+  </div>
+</section>

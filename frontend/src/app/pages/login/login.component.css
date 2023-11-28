@@ -1,0 +1,88 @@
+section {
+  display: flex;
+  align-items: center;
+
+  width: calc(100vw - 45px);
+  height: calc(100vh - 200px);
+  
+  background-color: rgb(234, 255, 176);
+}
+
+.container {
+  width: 50%;
+  height: 100%;
+
+  background-color: rgb(87, 87, 87);
+}
+
+.container h1 {
+  font-size: 3rem;
+}
+
+.form {
+  width: 400px;
+
+  margin: 18rem auto 0;
+}
+
+.form h1 {
+  text-align: center;
+  margin: 0 0 1rem 0;
+  color: rgb(255, 255, 255);
+}
+
+.form span {
+  font-size: 4rem;
+  color: rgb(35, 207, 0);
+}
+
+.footer {
+  width: 50%;
+  height: 100%;
+  background-color: rgb(27, 27, 27);
+}
+
+.footer img {
+  width: 100%;
+  height: calc(100vh - 38px);
+}
+
+.welcome { 
+  text-align: center;
+  margin: 5rem auto;
+}
+
+.welcome h2 {
+  color: rgb(165, 165, 165);
+  font-size: 1.3rem;
+}
+
+.welcome h1 {
+  color: rgb(255, 255, 255);
+  font-size: 3rem;
+}
+
+.icons {
+  margin-top: 2rem;
+}
+
+.icons div li {
+  width: 180px;
+  text-align: center;
+  padding: 0.5rem;
+  list-style: none;
+  margin: 0.5rem auto;
+  border-radius: 5px;
+  background-color: rgb(54, 54, 54);
+}
+
+.icons div li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  transition: 0.4s;
+}
+
+.icons div li a:hover {
+  color: rgb(35, 207, 0);
+}

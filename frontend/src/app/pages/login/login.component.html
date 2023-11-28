@@ -1,0 +1,53 @@
+<section >
+  <main class="container">
+    <div *ngIf="!authenticated" class="form">
+      <h1><span>C</span>linic</h1>
+      <app-login-form
+        (onSubmit)="login($event)"
+      ></app-login-form>
+    </div>
+    <div *ngIf="authenticated" class="welcome">
+      <h2>Welcome, </h2>
+      <h1>{{ username }}</h1>
+      <ul class="icons">
+        <div *ngIf="authenticated">
+          <li *ngIf="accessLevel > 1" class="item">
+            <a href="/allusers">
+              <i 
+                class="icon  bi bi-people"
+              ></i>
+              Users
+            </a>
+          </li>
+          <li class="item">
+            <a href="dashboard/{{id}}">
+              <i
+                class="icon bi bi-book-half"
+              ></i>
+              Dashboard
+            </a> 
+          </li>
+          <li class="item">
+            <a href="/report/{{id}}">
+              <i 
+                class="icon bi bi-calendar2-check"
+              ></i>
+              Report
+            </a>
+          </li>
+          <li *ngIf="accessLevel > 1" class="item">
+            <a href="/verify">
+              <i 
+                class="icon bi bi-check-all"
+              ></i>
+              Verify
+            </a>
+          </li>
+        </div>
+      </ul>
+    </div>
+  </main>
+  <footer class="footer">
+    <img src="./../../../assets/images/background.jpg" alt="">
+  </footer>
+</section>

@@ -1,0 +1,130 @@
+.header {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+
+  margin: 2rem 0 1rem;
+}
+
+.header a {
+  text-decoration: none;
+  background-color: rgb(39, 39, 39);
+  padding: 0.3rem 0.5rem;
+  border-radius: 5px;
+}
+
+.header-icon {
+  color: white;
+  font-weight: bold;
+
+  transition: 0.5s;
+}
+
+.header-icon:hover {
+  color: rgb(35, 177, 0);
+}
+
+.header-icon i {
+  margin-right: 0.4rem;
+  color: rgb(35, 177, 0);
+}
+
+.tablecontainer header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  padding: 1rem 0;
+}
+
+.tablecontainer header h1 {
+  font-size: 2rem;
+  color: rgb(228, 228, 228);
+}
+
+.tablecontainer h1 span {
+  color: rgb(35, 177, 0);
+}
+
+.tablecontainer header i {
+  font-size: 2rem;
+  color: rgb(223, 223, 223);
+
+  transition: 0.5s;
+}
+
+.tablecontainer header i:hover {
+  color: rgb(35, 177, 0);
+}
+
+.tablecontainer table {
+  margin: auto;
+  margin-bottom: 2rem;
+  padding: 0.1rem;
+
+  border: 3px solid rgb(35, 177, 0);
+  border-radius: 7px;
+
+  background-color: rgb(26, 26, 26);
+}
+
+.tableheader th {
+  font-size: 0.85rem;
+  padding: 0.3rem 0.5rem;
+
+  border-radius: 7px;
+
+  color: rgb(231, 231, 231);
+  background-color: rgb(26, 26, 26);
+}
+
+.tablerow td {
+  padding: 0.3rem 0.5rem;
+
+  font-size: 0.85rem;
+  font-weight: bold;
+  border-radius: 3px;
+
+  color: rgb(218, 218, 218);
+  background-color: rgb(73, 73, 73);
+}
+
+.icons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.icons i {
+  color: white;
+  font-size: 1.2rem;
+  transition: .5s;
+}
+
+.icons i:hover {
+  color: rgb(44, 221, 0);
+}
+
+.line {
+  width: 80%;
+  height: 1px;
+  background-image: linear-gradient(to right, rgb(35, 177, 0), rgb(212, 212, 212));
+  border: none;
+  margin: 1rem auto;
+}
+
+.enable-icon {
+  text-align: center;
+}
+
+.enable-icon i {
+  font-size: 1.2rem;
+}
+
+.enable {
+  color: rgb(35, 177, 0);
+}
+
+.disable {
+  color: red;
+}

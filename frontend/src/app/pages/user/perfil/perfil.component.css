@@ -1,0 +1,62 @@
+.user-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  padding-top: 2rem;
+}
+
+.user-data i {
+  font-size: 12rem;
+}
+
+.user-data main h1 span {
+  color: rgb(35, 177, 0);
+}
+
+.user-data main h1 {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.user-data main div {
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+}
+
+.user-data main div span{
+  font-weight: bold;
+  color: rgb(8, 8, 8);
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+
+  margin: 2rem 0 1rem;
+}
+
+.buttons a {
+  text-decoration: none;
+  background-color: rgb(39, 39, 39);
+  padding: 0.3rem 0.5rem;
+  border-radius: 5px;
+}
+
+.buttons-icon {
+  color: white;
+  font-weight: bold;
+
+  transition: 0.5s;
+}
+
+.buttons-icon:hover {
+  color: rgb(35, 177, 0);
+}
+
+.buttons-icon i {
+  margin-right: 0.3rem;
+  color: rgb(35, 177, 0);
+}

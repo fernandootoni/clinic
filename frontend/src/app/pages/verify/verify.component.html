@@ -1,0 +1,22 @@
+<section class="container">
+  <header>
+    <h2 class="title"><span>V</span>erify records</h2>
+  </header>
+  <body>
+    <div *ngFor="let user of userData">
+      <section *ngIf="
+        user.appointmentsUnverified.asPsy.length > 0 || 
+        user.appointmentsUnverified.asSup.length > 0
+      ">
+        <app-verify-table
+          tableName="{{user.name}}"
+          [recordsAsPsy]="user.appointmentsUnverified.asPsy"
+          [recordsAsSup]="user.appointmentsUnverified.asSup"
+        />
+      </section>
+    </div>
+  </body>
+  <div class="message" *ngIf="nothingToShow">
+    There is no record to be verified
+  </div>
+</section>

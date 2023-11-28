@@ -1,0 +1,41 @@
+<section *ngIf="authenticated" class="section-container">
+  <h1 class="title">
+    <span>{{dashboardUsername[0]}}</span>{{dashboardUsername.slice(1)}}
+  </h1>
+  <main class="main">
+    <app-weekly-schedule
+      *ngIf="appointmentsAsPsy.length > 0"
+      tableName="Psychologist"
+      [appointments]="appointmentsAsPsy"
+    />
+    
+    <app-weekly-schedule
+      *ngIf="appointmentsAsSup.length > 0"
+      tableName="Supervisor"
+      [appointments]="appointmentsAsSup"
+    />
+  </main>
+
+  <footer 
+    *ngIf="appointmentsAsPsy.length > 0 || appointmentsAsSup.length > 0" 
+    class="footer"
+  >
+    <hr class="separator">
+    <header>
+      <h2>Mark <span>A</span>ppointment</h2>
+    </header>
+
+    <main *ngIf="appointmentsLoaded">
+      <app-create-record-container
+        [appointmentsAsPsy]="appointmentsAsPsy"
+        [appointmentsAsSup]="appointmentsAsSup"
+      />
+    </main>
+  </footer>
+  <footer 
+    *ngIf="appointmentsAsPsy.length === 0 && appointmentsAsSup.length === 0"
+    class="footer"
+  >
+    <h2>Nothing to be shown</h2>
+  </footer>
+</section>

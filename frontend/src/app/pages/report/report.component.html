@@ -1,0 +1,60 @@
+<section *ngIf="authenticated && pageLoaded" class="container">
+  <header class="header">
+    <h1><span>{{dashboardUsername[0]}}</span>{{dashboardUsername.slice(1)}}</h1>
+    <h2>Month <span>R</span>eport</h2>
+    <section class="info">
+      <div class="options">
+        <select name="selectedMonth" id="selectedMonth"
+         (change)="onMonthSelected($event)"
+        >
+          <option 
+            *ngFor="let month of monthsAvailable" 
+            [value]="month"
+            [attr.selected]="month === selectedMonth ? true : null"
+          >
+            {{month}}
+          </option>
+        </select>
+      
+        <select 
+          name="selectedYear" 
+          id="selectedYear"
+          (change)="onYearSelected($event)"
+        >
+          <option 
+            *ngFor="let year of yearsAvailable" 
+            [value]="year"
+            [attr.selected]="year === selectedYear ? true: null"
+          >
+            {{year}}
+          </option>
+        </select>
+      </div>
+      
+      <footer>
+        <div class="header-footer">
+          <div>as Psychologist | <span>{{monthRecord.psyRecords.length}}</span> appointments</div>
+          <div>Total salary <span>R$ </span>{{monthRecord.totalSalary}}</div>
+          <div>as Supervisor | <span>{{monthRecord.supRecords.length}}</span> appointments</div>
+        </div>
+          <div class="header-footer">
+            <div>Waiting to be verified as Psychologist <span>{{appointmentsUnverified.appointmentsUnverifiedAsPsy.length}}</span></div>
+            <div>Waiting to be verified as Supervisor <span>{{appointmentsUnverified.appointmentsUnverifiedAsSup.length}}</span></div>
+          </div>
+      </footer>
+    </section>
+  </header>
+
+  <main *ngIf="recordsLoaded" class="done-table">
+    <app-done-table
+      *ngIf="monthRecord.psyRecords.length > 0"
+      [options]="monthRecord.psyRecords"
+      tableName="As Psychologist"
+    />
+    <app-done-table
+      *ngIf="monthRecord.supRecords.length > 0"
+      [options]="monthRecord.supRecords"
+      tableName="As Supervisor"
+    />
+  </main>
+</section>

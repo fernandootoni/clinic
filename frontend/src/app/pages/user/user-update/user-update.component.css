@@ -1,0 +1,15 @@
+.form-container {
+  width: 450px;
+  margin: 2rem auto;
+}
+
+.form-container h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 4rem;
+  color: white;
+}
+
+.form-container h2 span {
+  color: rgb(35, 177, 0);
+}

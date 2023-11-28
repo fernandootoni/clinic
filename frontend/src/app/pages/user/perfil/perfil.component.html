@@ -1,0 +1,52 @@
+<section *ngIf="authenticated && loaded" class="container">
+  <header class="user-data">
+    <i class="bi bi-person-circle"></i>
+    <main>
+      <h1><span>{{user.data.name[0]}}</span>{{user.data.name.slice(1)}}</h1>
+      <div><span>Email: </span>{{user.data.email}}</div>
+      <div><span>Hourlywage: </span>{{user.data.hourlywage}}</div>
+      <div><span>Supervisor hourlywage: </span>{{user.data.supervisorhourlywage}}</div>
+      <div><span>Access Level: </span>{{user.data.access_level}}</div>
+      <div><span>Enabled: </span>{{user.data.enable}}</div>
+    </main>
+  </header>
+  <div class="buttons">
+    <a href="/user/update/{{user.data.id}}">
+      <div class="buttons-icon">
+        <i class="bi bi-arrow-repeat"></i><span>Update User</span>
+      </div>
+    </a>
+    <a href="/user/changeaccess/{{user.data.id}}">
+      <div class="buttons-icon">
+        <i class="bi bi-capslock"></i><span>Change Access</span>
+      </div>
+    </a>
+    <a href="/user/create">
+      <div class="buttons-icon">
+        <i class="bi bi-person-x-fill"></i><span>Enable/Disable</span>
+      </div>
+    </a>
+    <a href="/dashboard/{{user.data.id}}">
+      <div class="buttons-icon">
+        <i class="bi bi-clipboard2-data"></i><span>Dashboard</span>
+      </div>
+    </a>
+    <a href="/report/{{user.data.id}}">
+      <div class="buttons-icon">
+        <i  class='bi bi-calendar2-check'></i><span>Report</span>
+      </div>
+    </a>
+  </div>
+  <main>
+    <app-weekly-schedule 
+      *ngIf="user.appointments.asPsy.length > 0"
+      tableName="Psychologist"
+      [appointments]="user.appointments.asPsy"
+    />
+    <app-weekly-schedule 
+      *ngIf="user.appointments.asSup.length > 0"
+      tableName="Supervisor"
+      [appointments]="user.appointments.asSup"
+    />
+  </main>
+</section>

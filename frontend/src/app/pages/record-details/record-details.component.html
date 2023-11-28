@@ -1,0 +1,37 @@
+<h1 class="title">Appointment Record Detail</h1>
+<section class="section">
+  <header class="header">
+    <div class="info">
+      <a href="/patient/dashboard/{{recordData.patient_id}}">
+        <span>Patient: </span> {{recordData.patient_name}}
+      </a>
+    </div>
+    <div class="info">
+      <a href="/user/{{recordData.psychologist_id}}">
+        <span>Psychologist: </span> {{recordData.psychologist_name}}
+      </a>
+    </div>
+    <div class="info">
+      <a href="/user/{{recordData.supervisor_id}}">
+        <span>Supervisor:</span> {{recordData.supervisor_name}}
+      </a>
+    </div>
+    <div class="info">
+      <span>Appointment Date: </span> {{recordData.appointment_date}}
+    </div>
+  </header>
+  <main>
+    <div class="info"><span>Duration: </span>{{recordData.duration}}min</div>
+    <div class="info"><span>Verified: </span>{{recordData.done}}</div>
+    <div class="info"><span>Done Date: </span>{{recordData.done_date}}</div>
+    <div class="info"><span>Created At: </span>{{recordData.formatted_created_at}}</div>
+    <div class="info"><span>Done Description: </span>{{recordData.done_description}}</div>
+    <div class="info"><span>Verified by: </span>{{recordData.verified_by}}</div>
+  </main>
+</section>
+
+<footer *ngIf="userLoggedIsAdmin" class="update-button">
+  <a href="/record/update/{{recordData.id}}">
+    Update Record
+  </a>
+</footer>

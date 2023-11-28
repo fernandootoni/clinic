@@ -1,0 +1,103 @@
+<section *ngIf="authenticated" class="container">
+  <header class="header">
+    <a href="/user/create">
+      <div class="header-icon">
+        <i class="bi bi-person-plus-fill"></i><span>Create User</span>
+      </div>
+    </a>
+    <a href="/patient/create">
+      <div class="header-icon">
+        <i class="bi bi-person-plus-fill"></i><span>Create Patient</span>
+      </div>
+    </a>
+    <a href="/appointment/create">
+      <div class="header-icon">
+        <i class="bi bi-calendar2-plus"></i><span>Create Appointment</span>
+      </div>
+    </a>
+  </header>
+  <div class="tablecontainer">
+    <header>
+      <h1>All <span>U</span>sers</h1>
+      <i (click)="toggleUserView()" class="bi bi-arrow-down"></i>
+    </header>
+    <table *ngIf="showUserTable" >
+      <tr class="tableheader">
+        <th>Name</th>
+        <th>E-mail</th>
+        <th>Access</th>
+        <th>Hourly</th>
+        <th>Supervisor</th>
+        <th>Enabled</th>
+        <th>...</th>
+      </tr>
+      <tr class="tablerow" *ngFor="let user of users">
+        <td>{{user.name}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.access_level}}</td>
+        <td>R$ {{user.hourlywage}},00</td>
+        <td>R$ {{user.supervisorhourlywage}},00</td>
+        <td class="enable-icon">
+          <i
+            [ngClass]="
+              user.enable === true
+                ? 'bi bi-check2 enable'
+                : 'bi bi-x-lg disable'
+            "
+          ></i>
+        </td>
+        <td class="icons">
+          <a href="">
+            <i class="bi bi-arrow-repeat"></i>
+          </a>
+          <a href="/user/{{user.id}}">
+            <i class="bi bi-person-fill"></i>
+          </a>
+          <a href="/dashboard/{{user.id}}">
+            <i class="bi bi-clipboard2-data"></i>
+          </a>
+          <a href="/report/{{user.id}}">
+            <i  class='bi bi-calendar2-check'></i>
+          </a>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <hr class="line">
+  <div class="tablecontainer">
+    <header>
+      <h1>All <span>P</span>atients</h1>
+      <i (click)="togglePatientView()" class="bi bi-arrow-down"></i>
+    </header>
+    <table *ngIf="showPatientTable" >
+      <tr class="tableheader">
+        <th>Name</th>
+        <th>Responsible</th>
+        <th>Phone</th>
+        <th>...</th>
+      </tr>
+      <tr class="tablerow" *ngFor="let patient of patients">
+        <td>{{patient.name}}</td>
+        <td>{{patient.responsible}}</td>
+        <td>{{patient.phone}}</td>
+        <td class="icons">
+          <a href="">
+            <i class="bi bi-arrow-repeat"></i>
+          </a>
+          <a href="">
+            <a href="/patient/dashboard/{{patient.id}}">
+              <i class="bi bi-clipboard2-data"></i>
+            </a>
+          </a>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <hr class="line">
+</section>
+
+<section *ngIf="!authenticated" class="container">
+  <h1 *ngIf="error.length > 0">
+    {{ error }}
+  </h1>
+</section>

@@ -1,0 +1,16 @@
+<section *ngIf="authenticated" class="container">
+  <header class="header">
+    <h1>{{patientName}}</h1>
+    <h3>{{responsibleName}}</h3>
+  </header>
+
+  <app-weekly-schedule
+    *ngIf="patientAppointments.length > 0"
+    tableName="Patient"
+    [appointments]="patientAppointments"
+  />
+
+  <div class="message" *ngIf="patientAppointments.length === 0">
+    {{patientName}} has no appointments registered.
+  </div>
+</section>

@@ -1,0 +1,11 @@
+<section class="section">
+  <h1>
+    <span>U</span>pdate record
+  </h1>
+  <app-update-record-form 
+    *ngIf="pageLoaded"
+    [userList]="users"
+    [patientList]="patients"
+    [record]="record"
+  />
+</section>

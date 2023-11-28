@@ -1,0 +1,116 @@
+.header h1 span {
+  color: rgb(35, 177, 0);
+}
+
+.header h1 {
+  padding-top: 1.5rem;
+
+  font-size: 2.5rem;
+  text-align: center;
+
+  color: rgb(255, 255, 255);
+}
+
+.header h2 {
+  padding: 0.5rem 0 2rem;
+
+  font-size: 1.3rem;
+  text-align: center;
+
+  color: #ffffff;
+}
+
+.header h2 span {
+  color: rgb(35, 177, 0);
+}
+
+.info {
+  width: 925px;
+  padding: 1rem;
+  margin: auto;
+  border-radius: 5px;
+  background-color: rgb(65, 65, 65);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 20px;
+}
+
+.options {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.options select {
+  padding: 0.5rem;
+
+  font-size: 1.1rem;
+  font-weight: bold;
+
+  color: white;
+  background-color: rgb(43, 43, 43);
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 7px;
+  border-color: rgb(35, 177, 0, .5);
+  border-radius: 5px;
+}
+
+.options select option {
+  padding: 0.5rem;
+  color: rgb(219, 219, 219);
+}
+
+.header-footer {
+  margin-top: 1rem;
+
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.header-footer div {
+  padding: 0.4rem;
+
+  border-radius: 5px;
+  font-weight: bold;
+
+  color: white;
+  background-color: #2e2e2e;
+}
+
+.header-footer div span {
+  color: rgb(35, 177, 0);
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+
+  margin: 1rem auto;
+}
+
+.main section {
+  padding: 0.5rem;
+  color: white;
+  background-color: rgb(59, 59, 59);
+}
+
+.main section ul li {
+  list-style: none;
+}
+
+.done-table {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 1rem;
+  gap: 3rem;
+}
+
+.teste {
+  background-color: red;
+  width: 100%;
+}
+
+.xablau {
+  background-color: blue;
+  width: 50%;
+}
