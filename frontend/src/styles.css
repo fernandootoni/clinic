@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  margin: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 15px;
+  background-color: rgb(163, 163, 163);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(0, 0, 0) ;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.toastify-default {
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 5px;
+  background: rgb(39, 39, 39);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px;
+}
+
+.success {
+  font-size: 1rem;
+  background: rgb(39, 39, 39);
+  color: rgb(143, 255, 139);
+}
+
+.error {
+  background: rgb(209, 27, 27);
+  color: rgb(255, 255, 255);
+}
+
+.warning {
+  background: rgb(53, 53, 53);
+  color: rgb(255, 251, 44);
+}
