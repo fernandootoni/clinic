@@ -1,6 +1,7 @@
 # Clinic Project
 
 ## Login Page
+The first page is the login page, where users will access their accounts. As this is a clinic system, only authorized individuals can create accounts. For unsuccessful login attempts, the backend will return 'invalid data' in response to any failed login request.
 ![Login_page](https://github.com/fernandootoni/clinic/assets/102544229/81b7e655-029e-48ef-abae-bdae4bf2709b)
 
 ## Logged Page
