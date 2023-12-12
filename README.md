@@ -30,14 +30,14 @@ The completion of appointments is a weekly process. This means that a user canno
 ## Patient Dashboard
 In the Patient Dashboard, patients or users will be able to view the appointments scheduled for the patients. They can access information about the patient's upcoming appointments and identify the responsible professionals who will be attending to them during those appointments.
 
-![PatientDashboard_page](https://github.com/fernandootoni/clinic/assets/102544229/d7206a88-b4ea-4438-a554-72dc56f8a8a8)
+![PatientDashboard_page](https://github.com/fernandootoni/clinic/assets/102544229/b2f51809-057e-46bf-8726-9d58b2a6be94)
 
 ## Perfil
 On the user's profile page, we can modify their information, adjust their access level, enable or disable their account, and gain access to their Dashboard and Monthly Report.
 
 Here, we can view all the consultations they are scheduled to conduct as both a psychologist and a supervisor. All pertinent details about these consultations, including the scheduled time and duration, are available for review.
 
-![Perfil_page](https://github.com/fernandootoni/clinic/assets/102544229/22ff28a8-724d-4411-a668-1d3e1bbb5659)
+![Perfil_page](https://github.com/fernandootoni/clinic/assets/102544229/15af932b-add6-48e2-b172-c50b37feaa2d)
 
 ## Report
 On the Report page, users have access to all their completed consultations within the month and those pending verification by an administrator. They can see the count of consultations conducted both as a psychologist and as a supervisor, along with comprehensive details about each consultation. This information includes the date of the consultation, its description, the parties involved (attendees and service providers).
