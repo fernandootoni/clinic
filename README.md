@@ -73,7 +73,4 @@ The creation of an appointment is more complex, as it requires specifying the at
 
 It's important to note that attempting to schedule an appointment during a time when another appointment is already scheduled will result in an error. This notification will inform the user that the selected time slot is already occupied by another appointment.
 
-![CreateAppointment_page](https://github.com/fernandootoni/clinic/assets/102544229/3e53a8f1-8904-4d14-aa43-b0187a4ae9ed)
-
-
-
+![CreateAppointment_page](https://github.com/fernandootoni/clinic/assets/102544229/9b41e04c-ee3b-4238-bfd6-0e3b3b3ad52c)
