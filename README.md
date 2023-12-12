@@ -72,6 +72,7 @@ The patient creation page is straightforward. Simply provide the correct data, a
 The creation of an appointment is more complex, as it requires specifying the attendee, psychologist, and supervisor, along with the appointment's date, hour, minute, and duration.
 
 It's important to note that attempting to schedule an appointment during a time when another appointment is already scheduled will result in an error. This notification will inform the user that the selected time slot is already occupied by another appointment.
+
 ![CreateAppointment_page](https://github.com/fernandootoni/clinic/assets/102544229/3e53a8f1-8904-4d14-aa43-b0187a4ae9ed)
 
 
